@@ -4,7 +4,7 @@ import SectionTitle from "../shared/SectionTitle";
 import { getProducts } from "@/services/products.service";
 import { IProduct } from "@/interfaces/product.interface";
 
-import { Button } from "@/Components/ui/button";
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import ProductItem from "../Products/ProductItem";
 

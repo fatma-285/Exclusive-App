@@ -10,16 +10,16 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/Components/ui/form";
-import { Input } from "@/Components/ui/input";
-import { Button } from "@/Components/ui/button";
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 import { addressFormSchema, addressFormState } from "@/schema/address.schema";
 import type { addressFormType } from "@/schema/address.schema";
 import { useActionState, useEffect } from "react";
 import { handlePayment } from "@/services/checkout.service";
 import { useCart } from "@/context/cartContext";
 import { toast } from "sonner";
-import { RadioGroup, RadioGroupItem } from "@/Components/ui/radio-group";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { useRouter } from "next/navigation";
 
 export default function CheckoutPage() {

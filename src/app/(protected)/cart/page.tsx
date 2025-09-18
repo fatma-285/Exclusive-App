@@ -7,11 +7,11 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/Components/ui/table";
+} from "@/components/ui/table";
 import Image from "next/image";
-import { Button } from "@/Components/ui/button";
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Input } from "@/Components/ui/input";
+import { Input } from "@/components/ui/input";
 import { useCart } from "@/context/cartContext";
 import {
   removeAllCart,
@@ -19,7 +19,7 @@ import {
   updateItemQty,
 } from "@/services/cart.service";
 import { toast } from "sonner";
-import { Badge } from "@/Components/ui/badge";
+import { Badge } from "@/components/ui/badge";
 import { X } from "lucide-react";
 export default function CartPage() {
   const { cartDetails, setCartDetails } = useCart();

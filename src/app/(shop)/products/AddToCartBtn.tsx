@@ -1,6 +1,6 @@
 "use client";
 import React, { useTransition } from "react";
-import { Button } from "@/Components/ui/button";
+import { Button } from "@/components/ui/button";
 import { addToCart } from "@/services/cart.service";
 import { toast } from "sonner";
 import { useCart } from "@/context/cartContext";

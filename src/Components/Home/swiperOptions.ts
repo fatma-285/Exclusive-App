@@ -1,4 +1,4 @@
-import { Pagination,Autoplay } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 export const swiperOptions = {
   pagination: {
     clickable: true,

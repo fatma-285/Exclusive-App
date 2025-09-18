@@ -6,14 +6,14 @@ import {
   NavigationMenuItem,
   NavigationMenuList,
   navigationMenuTriggerStyle,
-} from "@/Components/ui/navigation-menu";
+} from "@/components/ui/navigation-menu";
 import {
   Sheet,
   SheetContent,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/Components/ui/sheet";
+} from "@/components/ui/sheet";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -21,8 +21,8 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/Components/ui/dropdown-menu";
-import { Button } from "@/Components/ui/button";
+} from "@/components/ui/dropdown-menu";
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";

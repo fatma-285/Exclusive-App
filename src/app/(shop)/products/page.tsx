@@ -1,8 +1,8 @@
 import React from "react";
 import { getProducts } from "@/services/products.service";
 import { IProduct } from "@/interfaces/product.interface";
-import SectionTitle from "@/Components/shared/SectionTitle";
-import ProductItem from "@/Components/Products/ProductItem";
+import SectionTitle from "@/components/shared/SectionTitle";
+import ProductItem from "@/components/Products/ProductItem";
 
 export default async function ProductsSection() {
   const { data: products }: { data: IProduct[] } = await getProducts();

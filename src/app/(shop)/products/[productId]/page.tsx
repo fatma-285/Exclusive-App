@@ -1,4 +1,4 @@
-import { Button } from "@/Components/ui/button";
+import { Button } from "@/components/ui/button";
 import { IProduct } from "@/interfaces/product.interface";
 import { getProductDetails } from "@/services/productDetails.service";
 import { Heart, RefreshCcw, Star, Truck } from "lucide-react";
