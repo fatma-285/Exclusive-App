@@ -1,7 +1,7 @@
-import CategoriesSection from "@/Components/Home/CategoriesSection";
-import MainSlider from "@/Components/Home/MainSlider";
-import ProductsSection from "@/Components/Home/ProductsSection";
-import { SkeletonCard } from "@/Components/shared/SkeletonCard";
+import CategoriesSection from "@/components/Home/CategoriesSection";
+import MainSlider from "@/components/Home/MainSlider";
+import ProductsSection from "@/components/Home/ProductsSection";
+import { SkeletonCard } from "@/components/shared/SkeletonCard";
 import { Suspense } from "react";
 
 export default function Home() {

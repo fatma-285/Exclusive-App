@@ -3,8 +3,8 @@ import { Poppins } from "next/font/google";
 import "swiper/css";
 import "swiper/css/pagination";
 import "./globals.css";
-import { Toaster } from "@/Components/ui/sonner";
-import Navbar from "@/Components/Layout/Navbar";
+import { Toaster } from "@/components/ui/sonner";
+import Navbar from "@/components/Layout/Navbar";
 import Providers from "@/Providers";
 
 const poppins = Poppins({
