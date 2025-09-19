@@ -10,16 +10,16 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
+} from "../../../components/ui/form";
+import { Input } from "../../../components/ui/input";
+import { Button } from "../../../components/ui/button";
 import { useRouter } from "next/navigation";
 import {
   formState,
   registerFormSchema,
   registerSchema,
-} from "@/schema/register.schema";
-import { handleRegister } from "@/services/register.service";
+} from "../../../schema/register.schema";
+import { handleRegister } from "../../../services/register.service";
 import { useActionState, useEffect } from "react";
 import { toast } from "sonner";
 

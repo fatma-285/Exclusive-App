@@ -1,5 +1,5 @@
 "use server";
-import { getUserToken } from "@/lib/server.utils";
+import { getUserToken } from "../lib/server.utils";
 import {
   addressFormSchema,
   addressFormStateType,

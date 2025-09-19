@@ -3,9 +3,9 @@ import { Poppins } from "next/font/google";
 import "swiper/css";
 import "swiper/css/pagination";
 import "./globals.css";
-import { Toaster } from "@/components/ui/sonner";
-import Navbar from "@/components/Layout/Navbar";
-import Providers from "@/Providers";
+import { Toaster } from "../components/ui/sonner";
+import Navbar from "../components/Layout/Navbar";
+import Providers from "../Providers";
 
 const poppins = Poppins({
   weight: ["400", "500", "600", "700", "800", "900"],

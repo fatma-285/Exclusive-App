@@ -1,6 +1,6 @@
 "use server";
 
-import { getUserToken } from "@/lib/server.utils";
+import { getUserToken } from "../lib/server.utils";
 
 export async function getUserCart() {
   try {

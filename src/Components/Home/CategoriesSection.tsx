@@ -1,6 +1,6 @@
 import React from "react";
-import { getCategories } from "@/services/categories.service";
-import { ICategory } from "@/interfaces/category.interface";
+import { getCategories } from "../../services/categories.service";
+import { ICategory } from "../../interfaces/category.interface";
 import CategorySlider from "./CategorySlider";
 import SectionTitle from "../shared/SectionTitle";
 import { Separator } from "../ui/separator";

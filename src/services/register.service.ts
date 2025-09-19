@@ -1,6 +1,6 @@
 "use server";
 
-import { FormState, registerFormSchema } from "@/schema/register.schema";
+import { FormState, registerFormSchema } from "../schema/register.schema";
 
 export async function handleRegister(
   formState: FormState,

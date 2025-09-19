@@ -1,8 +1,8 @@
 import { Separator } from "@radix-ui/react-separator";
 import React from "react";
 import SectionTitle from "../shared/SectionTitle";
-import { getProducts } from "@/services/products.service";
-import { IProduct } from "@/interfaces/product.interface";
+import { getProducts } from "../../services/products.service";
+import { IProduct } from "../../interfaces/product.interface";
 import Link from "next/link";
 import ProductItem from "../Products/ProductItem";
 import { Button } from "../ui/button";

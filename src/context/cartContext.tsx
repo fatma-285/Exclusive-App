@@ -1,5 +1,5 @@
-import { ICartResponse } from "@/interfaces/cart.interface";
-import { getUserCart } from "@/services/cart.service";
+import { ICartResponse } from "../interfaces/cart.interface";
+import { getUserCart } from "../services/cart.service";
 import { createContext, useContext, useEffect, useState } from "react";
 
 interface ICartContext {

@@ -2,9 +2,9 @@
 import Image from "next/image";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import slider1 from "@/assets/images/slider-image-1.jpeg";
-import slider2 from "@/assets/images/slider-image-2.jpeg";
-import slider3 from "@/assets/images/slider-image-3.jpeg";
+import slider1 from "../../assets/images/slider-image-1.jpeg";
+import slider2 from "../../assets/images/slider-image-2.jpeg";
+import slider3 from "../../assets/images/slider-image-3.jpeg";
 import { swiperOptions } from "./swiperOptions";
 
 export default function MainSlider() {

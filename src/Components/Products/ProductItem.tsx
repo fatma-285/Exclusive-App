@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import { Star } from "lucide-react";
-import { IProduct } from "@/interfaces/product.interface";
+import { IProduct } from "../../interfaces/product.interface";
 import Link from "next/link";
-import AddToCartBtn from "@/app/(shop)/products/AddToCartBtn";
+import AddToCartBtn from "../../app/(shop)/products/AddToCartBtn";
 export default function ProductItem({ product }: { product: IProduct }) {
   return (
     <div className="shadow-sm py-4 px-6 rounded-sm">

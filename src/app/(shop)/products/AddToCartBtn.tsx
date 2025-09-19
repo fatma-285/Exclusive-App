@@ -1,9 +1,9 @@
 "use client";
 import React, { useTransition } from "react";
-import { Button } from "@/components/ui/button";
-import { addToCart } from "@/services/cart.service";
+import { Button } from "../../../components/ui/button";
+import { addToCart } from "../../../services/cart.service";
 import { toast } from "sonner";
-import { useCart } from "@/context/cartContext";
+import { useCart } from "../../../context/cartContext";
 import { Loader } from "lucide-react";
 
 export default function AddToCartBtn({
