@@ -6,7 +6,7 @@ import {
   NavigationMenuItem,
   NavigationMenuList,
   navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
+} from "../ui/navigation-menu";
 import {
   Sheet,
   SheetContent,
@@ -22,13 +22,13 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { signOut, useSession } from "next-auth/react";
 import { Badge } from "../ui/badge";
 import { useCart } from "@/context/cartContext";
+import { Button } from "../ui/button";
 
 export default function Navbar() {
   const pathName = usePathname();
