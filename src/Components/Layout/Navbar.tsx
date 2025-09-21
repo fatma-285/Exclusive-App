@@ -29,11 +29,17 @@ import { signOut, useSession } from "next-auth/react";
 import { Badge } from "../ui/badge";
 import { useCart } from "@/context/cartContext";
 import { Button } from "../ui/button";
+import { useWishList } from "@/context/wishListContext";
 
 export default function Navbar() {
   const pathName = usePathname();
   const { status } = useSession();
+
   const { cartDetails } = useCart();
+  const { WishListDetails } = useWishList();
+  console.log("WishListDetails", WishListDetails?.data.length);
+
+  console.log("status", status);
 
   const Links = [
     {
@@ -86,18 +92,20 @@ export default function Navbar() {
               <>
                 <div className="flex items-center gap-4">
                   <Link className="relative" href={"/wishlist"}>
-                    <Badge
-                      className="absolute -top-3 -end-3 h-5 min-w-5 rounded-full px-1 font-mono tabular-nums"
-                      variant="destructive"
-                    >
-                      99
-                    </Badge>
+                    {WishListDetails && (
+                      <Badge
+                        className="absolute -top-2 -end-3 h-5 min-w-5 rounded-full px-1 font-mono tabular-nums"
+                        variant="destructive"
+                      >
+                        {WishListDetails?.data.length}
+                      </Badge>
+                    )}
                     <Heart className="size-6" />
                   </Link>
                   <Link className="relative" href={"/cart"}>
                     {cartDetails && (
                       <Badge
-                        className="absolute -top-3 -end-3 h-5 min-w-5 rounded-full px-1 font-mono tabular-nums"
+                        className="absolute -top-2 -end-3 h-5 min-w-5 rounded-full px-1 font-mono tabular-nums"
                         variant="destructive"
                       >
                         {cartDetails?.numOfCartItems}
@@ -174,18 +182,20 @@ export default function Navbar() {
                     <>
                       <div className="flex items-center justify-between gap-4">
                         <Link className="relative" href={"/wishlist"}>
-                          <Badge
-                            className="absolute -top-2 -end-2 h-5 min-w-5 rounded-full px-1 font-mono tabular-nums"
-                            variant="destructive"
-                          >
-                            99
-                          </Badge>
+                          {WishListDetails && (
+                            <Badge
+                              className="absolute -top-2 -end-3 h-5 min-w-5 rounded-full px-1 font-mono tabular-nums"
+                              variant="destructive"
+                            >
+                              {WishListDetails?.data.length}
+                            </Badge>
+                          )}
                           <Heart className="size-6" />
                         </Link>
                         <Link className="relative" href={"/cart"}>
                           {cartDetails && (
                             <Badge
-                              className="absolute -top-3 -end-3 h-5 min-w-5 rounded-full px-1 font-mono tabular-nums"
+                              className="absolute -top-2 -end-3 h-5 min-w-5 rounded-full px-1 font-mono tabular-nums"
                               variant="destructive"
                             >
                               {cartDetails?.numOfCartItems}

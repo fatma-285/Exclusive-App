@@ -120,7 +120,17 @@
     @apply bg-background text-foreground;
   }
 }
-
+body,
+html,
+#root {
+  @apply h-screen m-0;
+}
+.app {
+  @apply flex flex-col min-h-screen;
+}
+.content {
+  @apply flex-1;
+}
 .categories-slider .swiper-pagination {
   @apply static;
 }

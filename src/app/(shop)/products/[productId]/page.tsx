@@ -1,10 +1,10 @@
-import { Button } from "../../../../components/ui/button";
 import { IProduct } from "../../../../interfaces/product.interface";
 import { getProductDetails } from "../../../../services/productDetails.service";
-import { Heart, RefreshCcw, Star, Truck } from "lucide-react";
+import { RefreshCcw, Star, Truck } from "lucide-react";
 import React from "react";
 import ProductSlider from "../ProductSlider";
 import AddToCartBtn from "../AddToCartBtn";
+import AddToWishListButton from "@/app/(protected)/wishlist/addToWishListButton";
 
 export default async function ProductDetails({
   params: { productId },
@@ -36,9 +36,7 @@ export default async function ProductDetails({
             </p>
             <div className="w-full flex items-center gap-5 mb-10">
               <AddToCartBtn variant={"destructive"} productId={productId} />
-              <Button variant={"outline"}>
-                <Heart />
-              </Button>
+              <AddToWishListButton productId={productId} />
             </div>
             <ul className="border border-black/50 divide-y divide-black/50">
               <li className="p-5 flex items-center gap-4">

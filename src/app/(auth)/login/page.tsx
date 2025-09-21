@@ -20,8 +20,11 @@ import {
 import { signIn } from "next-auth/react";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
+import { useTransition } from "react";
 
 export default function LoginPage() {
+  const [isPending, startTransition] = useTransition();
   const router = useRouter();
   const form = useForm<loginFormPayload>({
     resolver: zodResolver(loginFormSchema),
@@ -32,27 +35,29 @@ export default function LoginPage() {
   });
   async function onSubmit(values: loginFormPayload) {
     console.log(values);
-    try {
-      const res = await signIn("credentials", {
-        email: values.email,
-        password: values.password,
-        redirect: false,
-        callbackUrl: "/",
-      });
-      console.log(res);
-      if (res?.ok) {
-        router.push("/");
-        toast.success("Login Successfully", {
-          position: "top-center",
+    startTransition(async () => {
+      try {
+        const res = await signIn("credentials", {
+          email: values.email,
+          password: values.password,
+          redirect: false,
+          callbackUrl: "/",
         });
-      } else {
-        toast.error(res?.error, {
-          position: "top-center",
-        });
+        console.log(res);
+        if (res?.ok) {
+          router.push("/");
+          toast.success("Login Successfully", {
+            position: "top-center",
+          });
+        } else {
+          toast.error(res?.error, {
+            position: "top-center",
+          });
+        }
+      } catch (error) {
+        console.log(error);
       }
-    } catch (error) {
-      console.log(error);
-    }
+    });
   }
   return (
     <section className="py-12">
@@ -86,7 +91,11 @@ export default function LoginPage() {
                 </FormItem>
               )}
             />
-            <Button type="submit">Submit</Button>
+
+            <p className="text-left underline text-sm mb-4">
+              <Link href="/forgotpassword">Forgot Password ?</Link>
+            </p>
+            <Button type="submit">{isPending ? "Loading..." : "Submit"}</Button>
           </form>
         </Form>
       </div>

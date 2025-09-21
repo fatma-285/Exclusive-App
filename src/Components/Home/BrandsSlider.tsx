@@ -3,13 +3,9 @@ import React from "react";
 import { swiperOptions } from "./swiperOptions";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
-import { ICategory } from "../../interfaces/category.interface";
+import { IBrand } from "@/interfaces/brand.interface";
 import Link from "next/link";
-export default function CategorySlider({
-  categories,
-}: {
-  categories: ICategory[];
-}) {
+export default function BrandsSlider({ brands }: { brands: IBrand[] }) {
   return (
     <Swiper
       {...swiperOptions}
@@ -36,19 +32,19 @@ export default function CategorySlider({
       }}
       className="categories-slider mb-20"
     >
-      {categories &&
-        categories.map((cat) => (
-          <SwiperSlide key={cat._id} className="mb-8">
-            <Link href={`/categories/${cat._id}`}>
+      {brands &&
+        brands.map((brand) => (
+          <SwiperSlide key={brand._id} className="mb-8">
+            <Link href={`/brands/${brand._id}`}>
               <Image
-                src={cat.image}
-                alt={cat.name}
-                width={270}
-                height={250}
+                src={brand.image}
+                alt={brand.slug}
+                width={250}
+                height={230}
                 loading="lazy"
-                className="w-full h-[15.625rem] object-contain bg-gray-100 mb-4"
+                className=" h-[13.625rem] w-full object-contain bg-gray-100 mb-4"
               />
-              <h3 className="text-center font-medium">{cat.name}</h3>
+              <h3 className="text-center font-medium">{brand.name}</h3>
             </Link>
           </SwiperSlide>
         ))}

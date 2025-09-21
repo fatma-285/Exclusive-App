@@ -1,3 +1,4 @@
+import BrandsSection from "@/components/Home/BrandsSection";
 import CategoriesSection from "../components/Home/CategoriesSection";
 import MainSlider from "../components/Home/MainSlider";
 import ProductsSection from "../components/Home/ProductsSection";
@@ -10,6 +11,9 @@ export default function Home() {
       <MainSlider />
       <Suspense fallback={<SkeletonCard />}>
         <CategoriesSection />
+      </Suspense>
+      <Suspense fallback={<SkeletonCard />}>
+        <BrandsSection />
       </Suspense>
       <Suspense fallback={<SkeletonCard />}>
         <ProductsSection />
