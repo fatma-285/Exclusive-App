@@ -32,7 +32,7 @@ export const authOptions: NextAuthOptions = {
             throw new Error(data.message || "something went wrong");
           }
           const decoded = JSON.parse(atob(data.token.split(".")[1]));
-          console.log("TOKEN IN AUTH", data.token);
+          
           return {
             id: decoded.id,
             user: data.userز,

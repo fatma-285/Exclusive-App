@@ -26,7 +26,7 @@ export async function middleware(request: NextRequest) {
   if (!token && protectedRoutes.includes(pathname)) {
     return NextResponse.redirect(new URL("/login", request.nextUrl));
   }
-  console.log("TOKEN IN MIDDLEWARE", token);
+  // console.log("TOKEN IN MIDDLEWARE", token);
 
   return NextResponse.next(); // mean that if the user is authenticated it will go to the next page
 }

@@ -4,16 +4,9 @@ import React from "react";
 import CartContextProvider from "./context/cartContext";
 import WishlistContextProvider from "./context/wishListContext";
 
-export default function Providers({
-  children,
-  session,
-}: {
-  children: React.ReactNode;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  session: any;
-}) {
+export default function Providers({ children }: { children: React.ReactNode }) {
   return (
-    <SessionProvider session={session}>
+    <SessionProvider>
       <WishlistContextProvider>
         <CartContextProvider>{children}</CartContextProvider>
       </WishlistContextProvider>

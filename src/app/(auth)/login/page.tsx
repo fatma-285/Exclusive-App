@@ -34,7 +34,6 @@ export default function LoginPage() {
     },
   });
   async function onSubmit(values: loginFormPayload) {
-    console.log(values);
     startTransition(async () => {
       try {
         const res = await signIn("credentials", {
@@ -43,7 +42,6 @@ export default function LoginPage() {
           redirect: false,
           callbackUrl: "/",
         });
-        console.log(res);
         if (res?.ok) {
           router.push("/");
           toast.success("Login Successfully", {

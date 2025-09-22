@@ -21,7 +21,10 @@ export default function WishlistContextProvider({
   const [WishListDetails, setWishListDetails] =
     useState<IProductsResponse | null>(null);
   async function getWishListDetails() {
+    console.log("getWishListDetails");
     const { data }: { data: IProductsResponse } = await getWishList();
+    console.log("data from wishlist", data);
+
     setWishListDetails(data);
   }
   useEffect(() => {

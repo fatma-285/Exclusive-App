@@ -17,8 +17,6 @@ export default function VerifyCodePage() {
     startTransition(async () => {
       const res = await handleVerificationCode(code);
       if (res.success) {
-        console.log(res);
-
         toast.success(res.message || "Verification Code Sent Successfully", {
           position: "top-center",
         });

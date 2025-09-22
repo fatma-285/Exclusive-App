@@ -13,7 +13,10 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  experimental: {
+    serverActions: { allowedOrigins: ["*"] },
+  },
   // output: "export",
 };
-
+module.exports = nextConfig;
 export default nextConfig;

@@ -36,7 +36,6 @@ export default function RegisterPage() {
       phone: "",
     },
   });
-  console.log(action);
   useEffect(() => {
     if (action) {
       if (action.success && action.message) {

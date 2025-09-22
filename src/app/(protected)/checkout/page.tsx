@@ -29,7 +29,6 @@ export default function CheckoutPage() {
   const { cartDetails, setCartDetails } = useCart();
 
   const [action, formAction] = useActionState(handlePayment, addressFormState);
-  console.log(action);
 
   const router = useRouter();
   const form = useForm<addressFormType>({

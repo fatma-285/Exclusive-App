@@ -6,8 +6,6 @@ import "./globals.css";
 import { Toaster } from "../components/ui/sonner";
 import Navbar from "../components/Layout/Navbar";
 import Providers from "../Providers";
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/auth";
 import Footer from "@/components/Layout/Footer";
 
 const poppins = Poppins({
@@ -25,13 +23,12 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const session = await getServerSession(authOptions);
   return (
     <html lang="en">
       <body
         className={`${poppins.className} bg-background text-foreground app`}
       >
-        <Providers session={session}>
+        <Providers>
           <Navbar />
           <main className="content">{children}</main>
           <Toaster />
