@@ -32,7 +32,7 @@ export const authOptions: NextAuthOptions = {
             throw new Error(data.message || "something went wrong");
           }
           const decoded = JSON.parse(atob(data.token.split(".")[1]));
-          
+
           return {
             id: decoded.id,
             user: data.userز,
@@ -48,6 +48,7 @@ export const authOptions: NextAuthOptions = {
   callbacks: {
     async jwt({ token, user }) {
       if (user) {
+        token.id = user.id;
         token.user = user.user;
         token.token = user.token;
       }

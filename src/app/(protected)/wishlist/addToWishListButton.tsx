@@ -50,7 +50,7 @@ export default function AddToWishListButton({
   return (
     <Button
       variant={"ghost"}
-      className="top-3 right-3 absolute"
+      className="top-3 right-3 "
       onClick={() =>
         inWishList
           ? removeProductFromWishList(productId)

@@ -143,7 +143,7 @@ export default function CheckoutPage() {
                   <FormControl>
                     <RadioGroup
                       onValueChange={field.onChange}
-                      defaultValue={field.value}
+                      defaultValue={"cash"}
                       name={field.name}
                       className="flex flex-col"
                     >

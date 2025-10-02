@@ -123,6 +123,9 @@ export default function Navbar() {
                       <DropdownMenuItem>
                         <Link href="/profile">Profile</Link>
                       </DropdownMenuItem>
+                      <DropdownMenuItem>
+                        <Link href="/allorders">My Orders</Link>
+                      </DropdownMenuItem>
                       <DropdownMenuItem
                         onClick={() => signOut({ callbackUrl: "/login" })}
                         className="cursor-pointer"
@@ -212,6 +215,9 @@ export default function Navbar() {
                             <DropdownMenuSeparator />
                             <DropdownMenuItem>
                               <Link href="/profile">Profile</Link>
+                            </DropdownMenuItem>
+                            <DropdownMenuItem>
+                              <Link href="/allorders">My Orders</Link>
                             </DropdownMenuItem>
                             <DropdownMenuItem
                               onClick={() => signOut({ callbackUrl: "/login" })}

@@ -29,14 +29,18 @@ export async function handlePayment(
       error: parsedData.error?.flatten().fieldErrors,
       message: null,
       paymentMethod,
+      callbackUrl: "/cart",
     };
   }
 
   try {
     const token = await getUserToken();
-
+    const endPoint =
+      paymentMethod === "cash"
+        ? `/api/v1/orders/${cartId}`
+        : `api/v1/orders/checkout-session/${cartId}?url=${process.env.NEXTAUTH_URL}`;
     const res = await fetch(
-      `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/v1/orders/${cartId}`,
+      `${process.env.NEXT_PUBLIC_API_BASE_URL}/${endPoint}`,
       {
         method: "POST",
         headers: {
@@ -63,7 +67,7 @@ export async function handlePayment(
       success: true,
       error: {},
       message: data.message || "order placed successfully",
-      callbackUrl: paymentMethod === "cash" ? "/allorders" : data.url,
+      callbackUrl: paymentMethod === "cash" ? "/allorders" : data.session.url,
       paymentMethod,
     };
   } catch (error) {

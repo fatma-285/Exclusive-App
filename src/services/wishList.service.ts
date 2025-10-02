@@ -3,7 +3,6 @@ import { getUserToken } from "../lib/server.utils";
 export async function getWishList() {
   try {
     const token = await getUserToken();
-    console.log("token from wishlist", token);
 
     const res = await fetch(
       `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/v1/wishlist`,
